@@ -1,0 +1,21 @@
+<ion-view view-title="TASK">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="task in Task.Task" href="#/app/tasklists/{{task.task_id}}">
+        {{task.task_name}} 
+		
+		<div>
+{{task.task_area}}
+	</div>
+	
+	<div>
+	{{task.task_problem}}
+	</div>
+          <div>
+        {{date | date:'yyyy-MM-dd'}}
+	</div>
+		
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

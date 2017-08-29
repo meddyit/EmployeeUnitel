@@ -1,0 +1,28 @@
+<ion-view view-title="Login" name="login-view">
+      <ion-content class="padding">
+
+   <!--     <form name="signinForm" novalidate>  -->
+
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username" required>
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password" required>
+          </label>
+      </div>
+
+     <!--<div class="padding">
+            <p ng-show="signinForm.username.$error.required">* Username is required</p>
+            <p ng-show="signin.username.$invalid && !myForm.username.$pristine">* Username must be an email address</p>
+            <p ng-show="signin.username.$error.minlength">* Username must be longer than 5 characters</p>
+            <p ng-show="myForm.password.$error.required">* Password is required</p>
+            <p ng-show="myForm.password.$error.minlength">* Password must be atleast 6 characters</p>
+        </div>   -->
+
+      <button class="button button-block button-calm" ng-disabled="myForm.$invalid" ng-click="account()">Login</button>
+
+     <!--   </form> -->   
+
+  </ion-content>
+</ion-view>

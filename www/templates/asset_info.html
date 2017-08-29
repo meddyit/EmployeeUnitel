@@ -1,0 +1,21 @@
+<ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Ionic Blank Starter</h1>
+      </ion-header-bar>
+      <ion-content>
+<div ng-controller="assetinfo">
+<ion-list>
+   <ion-item ng-repeat="x in assets"> {{x}}
+     
+   </ion-item>
+  
+</ion-list>
+ <label for="NewRequest">Need Another Asset...Request by clicking below:</label>
+  <button ng-click="btclicked();">New Asset</button>
+
+</div>
+
+
+
+      </ion-content>
+    </ion-pane>

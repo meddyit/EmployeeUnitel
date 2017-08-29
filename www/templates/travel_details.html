@@ -1,0 +1,27 @@
+ <ion-pane>
+    <ion-content>
+ <div ng-controller="formCtrl">
+ <pre> 
+ <div  ng-controller="myCtrl">
+Select Project:
+
+<select name= "inputTag" id= "inputTag"  ng-model="data.todo.inputTag">
+  <option ng-repeat="todo in todos" >{{todo}}</option>
+</select>
+</div>
+Total Amount <input type="text" ng-model="data.totalAmount"  required/>
+
+
+Description :
+<input type="text" ng-model="data.nameOfExpense" required/>
+
+Upload Document :
+
+    <span><img ng-if="imgURI !== undefined" ng-src="{{imgURI}}"></span>
+            <span><img ng-if="imgURI === undefined" ng-src="http://placehold.it/350x300"></span>
+    <button class="button" ng-click="takePicture()">Take Picture</button>
+    <button type="submit" ng-click="submitForm();">Submit</button>
+</pre>
+</div>
+ </ion-content>
+ </ion-pane>

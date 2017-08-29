@@ -1,0 +1,27 @@
+
+<ion-pane>
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">New Asset Request</h1>
+      </ion-header-bar>
+      <ion-content>
+<div ng-controller="request">
+   <pre>
+   <div  ng-controller="availableAssets">
+
+Select Asset:
+<select name= "inputTag" id= "inputTag"  ng-model="data.x.inputTag">
+  <option ng-repeat="x in allAssets" >{{x}}</option>
+</select>
+</div>
+
+Purpose for requesting Asset
+<textarea name="description" ng-model="data.description" placeholder="Mention Your Purpose Here" maxlength="500" style="width: 100vw; height: 30vw; border: solid"></textarea>
+
+  <button ng-click="submitRequest();">Request</button>
+
+</pre>
+   </div>
+
+      </ion-content>
+  </ion-pane>
+  

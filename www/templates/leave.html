@@ -1,0 +1,31 @@
+<ion-view title="Apply" id="page4" style="">
+  <ion-content padding="true" class="has-header">
+    <form name="myForm" id="loginHere-form1" class="list">
+      <label class="item item-input" id="loginHere-input2">
+        <input placeholder="from" type="date" ng-model="data.from">
+      </label>
+      <label class="item item-input" id="loginHere-input3">
+        <input placeholder="till" type="date" ng-model="data.till">
+      </label>
+    </form>
+    
+    <form id="loginHere-form3" class="list">
+      <label class="item item-input" id="loginHere-textarea2">
+        <span class="input-label"></span><textarea placeholder="reason" ng-model="data.reason"></textarea></label>
+    </form>
+    
+          <!--  <div class="padding">
+
+            <p ng-show="myForm.from.$error.required">* Start date is required</p>
+
+            <p ng-show="myForm.reason.$invalid && !myForm.reason.$pristine">* Reason should be described</p>
+
+            <p ng-show="myForm.to.$error.required">* last date is required</p>
+
+        </div> -->
+
+    <a class="button button-calm button-block" ng-click="submitForm()">send</a>
+  </ion-content>
+</ion-view>
+
+
