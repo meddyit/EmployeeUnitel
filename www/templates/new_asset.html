@@ -3,14 +3,14 @@
       <ion-header-bar class="bar-stable">
         <h1 class="title">New Asset Request</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content
 <div ng-controller="request">
    <pre>
    <div  ng-controller="availableAssets">
 
 Select Asset:
 <select name= "inputTag" id= "inputTag"  ng-model="data.x.inputTag">
-  <option ng-repeat="x in allAssets" >{{x}}</option>
+  <option ng-repeat="x in allAssets" >{{x.assetName}}</option>   <!-- availableasset ctrl mei server se json data lene ke liye  -->
 </select>
 </div>
 

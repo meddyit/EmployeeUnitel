@@ -234,15 +234,15 @@ else{
 
 
 //asset controller
-.controller('assetinfo',function($scope){
+.controller('assetinfo',function($scope,$state){
 
 alert("in controller");
 
 $scope.assets=["Asset1","Asset2","Asset3","Asset4","Asset5","Asset6","Asset7"];
 $scope.btclicked=function()
 {
- window.location = "new_asset.html";
-
+ //window.location = "new_asset.html";
+$state.go("app.new_asset");
 
 }
 
@@ -250,13 +250,13 @@ $scope.btclicked=function()
 
 })
 
-.controller('availableAssets',function($scope){
+/*.controller('availableAssets',function($scope){
 
   alert("in availableAssets");
     $scope.allAssets=["NewAsset1","NewAsset2","NewAsset3","NewAsset4","NewAsset5","NewAsset6","NewAsset7"];
 })
 
-/* .controller('request',function($scope,$http){
+.controller('request',function($scope,$http){
   alert("in req");
 
 $scope.data={};
@@ -280,6 +280,53 @@ $scope.submitRequest=function(){
 
 
 })*/
+
+
+
+
+//get asset data from server
+
+.controller('availableAssets',function($scope,$http){
+
+alert("availble");
+ 
+ $http.get("http://192.168.1.126/serv/service/send_asset")
+.success(function(response) {   
+//.then(function(response) {
+alert("hit");
+alert(JSON.stringify(response));
+
+        $scope.allAssets = response;
+
+})
+})
+
+.controller('request',function($scope,$http){
+  alert("in req");
+
+$scope.data={};
+
+$scope.submitRequest=function(){
+  alert("is clicked ");
+ $http({
+        method  : 'POST',
+          url     : 'http://192.168.1.126/serv/service/get_asset',
+          data    :  $scope.data,
+          headers : { 'Content-Type': 'application/x-www-form-urlencoded' } 
+
+         }).success(function(res) {
+              alert(res);
+
+          })
+
+}
+
+
+
+
+})
+
+
 
 
 

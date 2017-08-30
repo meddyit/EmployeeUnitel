@@ -159,7 +159,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova', 'ngStora
     views: {
       'menuContent': {
         templateUrl: 'templates/new_asset.html',
-        controller: 'availableAssets'
+       
       }
     }
   })

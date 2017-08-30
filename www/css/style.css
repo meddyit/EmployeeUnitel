@@ -1,5 +1,14 @@
 /* Empty. Add your own CSS if you like */
 
 
+ion-view {
+    background: linear-gradient(white,grey);
+    
+   
+}
 
+ion-list{
+    background: #ede3e3;
+
+}
 
